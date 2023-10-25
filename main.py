@@ -11,6 +11,12 @@ def encoded_password():
     return result_string
 
 
+def decode_password(encoded_password):
+    decoded_password = []
+    for char in encoded_password:
+        decoded_password.append(str(int(char) - 3))
+    return "".join(decoded_password)
+
 def menu():
 
         while True:
@@ -27,9 +33,9 @@ def menu():
                 print(password_encoded)
 
 
-
-            # elif menu_option == 2:
-            #     decoded_password()
+            elif menu_option == 2:
+                password = decode_password(password_encoded)
+                print(password)
             elif menu_option == 3:
                 print("Exiting the program.")
                 break
