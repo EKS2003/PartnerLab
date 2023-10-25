@@ -10,7 +10,9 @@ def encoded_password():
             result_string += char
     return result_string
 
+
 def menu():
+
         while True:
             print("""
     Menu
@@ -21,7 +23,10 @@ def menu():
                    """)
             menu_option = int(input("Please enter an option: "))
             if menu_option == 1:
-                print(encoded_password())
+                password_encoded = encoded_password()
+                print(password_encoded)
+
+
 
             # elif menu_option == 2:
             #     decoded_password()
